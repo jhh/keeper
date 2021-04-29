@@ -1,6 +1,6 @@
 
-# Created by https://www.toptal.com/developers/gitignore/api/django,vscode
-# Edit at https://www.toptal.com/developers/gitignore?templates=django,vscode
+# Created by https://www.toptal.com/developers/gitignore/api/django,vscode,dotenv
+# Edit at https://www.toptal.com/developers/gitignore?templates=django,vscode,dotenv
 
 ### Django ###
 *.log
@@ -159,6 +159,9 @@ Thumbs.db
 .prof
 
 
+### dotenv ###
+.env
+
 ### vscode ###
 .vscode/*
 !.vscode/settings.json
@@ -167,4 +170,4 @@ Thumbs.db
 !.vscode/extensions.json
 *.code-workspace
 
-# End of https://www.toptal.com/developers/gitignore/api/django,vscode
+# End of https://www.toptal.com/developers/gitignore/api/django,vscode,dotenv
