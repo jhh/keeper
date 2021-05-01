@@ -1,0 +1,109 @@
+- model: trapper.activity
+  pk: 1
+  fields:
+    name: Activity 1
+    meta:
+      fixture: true
+      subsystem: Test Subsystem
+    created_at: 2021-04-29 21:59:07.603040+00:00
+- model: trapper.activity
+  pk: 2
+  fields:
+    name: Activity 2
+    meta:
+      fixture: true
+      subsystem: Test Subsystem
+    created_at: 2021-04-29 21:59:07.603040+00:00
+- model: trapper.action
+  pk: 1
+  fields:
+    activity: 1
+    name: Action 1-1
+    measures: '["temperature", "speed"]'
+    meta:
+      fixture: true
+    created_at: 2021-04-29 22:01:07.461768+00:00
+- model: trapper.action
+  pk: 2
+  fields:
+    activity: 1
+    name: Action 1-2
+    measures: '["angle", "height"]'
+    meta:
+      fixture: true
+    created_at: 2021-04-29 22:01:07.461768+00:00
+- model: trapper.action
+  pk: 3
+  fields:
+    activity: 2
+    name: Action 2-1
+    measures: '["angle", "height"]'
+    meta:
+      fixture: true
+    created_at: 2021-04-29 22:01:07.461768+00:00
+- model: trapper.trace
+  pk: 1
+  fields:
+    action: 1
+    milliseconds: 0
+    measurements: '["68.0", "0.0"]'
+- model: trapper.trace
+  pk: 2
+  fields:
+    action: 1
+    milliseconds: 20
+    measurements: '["70.0", "10.0"]'
+- model: trapper.trace
+  pk: 3
+  fields:
+    action: 1
+    milliseconds: 40
+    measurements: '["72.0", "20.0"]'
+- model: trapper.trace
+  pk: 4
+  fields:
+    action: 1
+    milliseconds: 60
+    measurements: '["74.0", "30.0"]'
+- model: trapper.trace
+  pk: 5
+  fields:
+    action: 1
+    milliseconds: 60
+    measurements: '["76.0", "40.0"]'
+- model: trapper.trace
+  pk: 6
+  fields:
+    action: 1
+    milliseconds: 80
+    measurements: '["78.0", "50.0"]'
+- model: trapper.trace
+  pk: 7
+  fields:
+    action: 1
+    milliseconds: 100
+    measurements: '["80.0", "60.0"]'
+- model: trapper.trace
+  pk: 8
+  fields:
+    action: 2
+    milliseconds: 0
+    measurements: '["0.0", "10.0"]'
+- model: trapper.trace
+  pk: 9
+  fields:
+    action: 2
+    milliseconds: 20
+    measurements: '["30.0", "15.0"]'
+- model: trapper.trace
+  pk: 10
+  fields:
+    action: 2
+    milliseconds: 40
+    measurements: '["45.0", "25.0"]'
+- model: trapper.trace
+  pk: 11
+  fields:
+    action: 3
+    milliseconds: 20
+    measurements: '["27.0", "67.0"]'
