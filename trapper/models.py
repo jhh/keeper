@@ -22,5 +22,5 @@ class Action(models.Model):
 
 class Trace(models.Model):
     action = models.ForeignKey(Action, related_name="traces", on_delete=models.CASCADE)
-    milliseconds = models.PositiveIntegerField()
-    measurements = ArrayField(models.FloatField())
+    time = models.PositiveIntegerField()
+    data = ArrayField(models.FloatField())

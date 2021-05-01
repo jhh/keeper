@@ -29,8 +29,8 @@ class TraceSerializer(serializers.ModelSerializer):
         model = Trace
         fields = (
             "action",
-            "milliseconds",
-            "measurements",
+            "time",
+            "data",
         )
 
 
