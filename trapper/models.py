@@ -12,7 +12,7 @@ class Activity(models.Model):
 
 class Action(models.Model):
     activity = models.ForeignKey(
-        Activity, related_name="actions", on_delete=models.CASCADE
+        Activity, related_name="actions", null=True, on_delete=models.CASCADE
     )
     name = models.CharField(max_length=200)
     measures = ArrayField(models.CharField(max_length=20))
