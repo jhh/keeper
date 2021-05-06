@@ -35,8 +35,6 @@ class TraceSerializer(serializers.ModelSerializer):
 
 
 class ActionSerializer(serializers.HyperlinkedModelSerializer):
-    traces = TraceSerializer(many=True, read_only=True)
-
     class Meta:
         model = Action
         fields = (
@@ -46,6 +44,5 @@ class ActionSerializer(serializers.HyperlinkedModelSerializer):
             "activity",
             "measures",
             "meta",
-            "traces",
             "created_at",
         )
