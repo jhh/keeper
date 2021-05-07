@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "keeper"
-version = "0.1.0"
+version = "1.0.0"
 description = "Trapper Keeper back-end"
 authors = ["Jeff Hutchison <jeff@j3ff.io>"]
 license = "MIT"
