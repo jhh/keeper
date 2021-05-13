@@ -11,5 +11,6 @@ router.register(r"traces", views.TraceViewSet)
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", include(router.urls)),
-    path("last_action/", views.get_last_action),
+    path("reports/action/last/", views.get_last_action),
+    path("reports/action/<int:id>/", views.get_action),
 ]

@@ -45,6 +45,15 @@ def get_last_action(request):
     return JsonResponse(action_dict, safe=False)
 
 
+@require_http_methods(["GET"])
+def get_action(request, id):
+    action = Action.objects.get(pk=id)
+    action_dict = model_to_dict(action)
+    action_dict["created_at"] = action.created_at
+    action_dict["traces"] = get_activity_traces(action.id)
+    return JsonResponse(action_dict, safe=False)
+
+
 def get_activity_traces(id):
     with connection.cursor() as cursor:
         cursor.execute(SQL, [id])
