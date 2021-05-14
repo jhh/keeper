@@ -3,8 +3,8 @@ version: "3"
 services:
   app:
     image: j3ff/keeper:latest
-    # build:
-    #   context: .
+    build:
+      context: .
     ports:
       - "3003:3003"
     command: >
