@@ -37,6 +37,17 @@ WHERE a.id = t.action_id AND a.id = %s
 
 
 @require_http_methods(["GET"])
+def get_last_activity(request):
+    activity = Activity.objects.latest("created_at")
+    activity_dict = model_to_dict(activity)
+    activity_dict["created_at"] = activity.created_at
+    activity_dict["actions"] = [
+        (a.id, a.name, a.meta["description"]) for a in activity.actions.all()
+    ]
+    return JsonResponse(activity_dict, safe=False)
+
+
+@require_http_methods(["GET"])
 def get_last_action(request):
     action = Action.objects.latest("created_at")
     action_dict = model_to_dict(action)
